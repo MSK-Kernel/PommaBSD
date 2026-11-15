@@ -9,6 +9,7 @@ ROOT = iso
 all: $(ISO)
 
 $(ISO): $(ROOT)/boot/cdboot $(ROOT)/boot/loader $(ROOT)/boot/kernel/kernel
+	mkdir -p iso/tmp iso/dev iso/root iso/mnt iso/var iso/home
 	xorriso -as mkisofs -o $(ISO) -V "$(VOLUME)" -R -b boot/cdboot -no-emul-boot -boot-load-size 4 $(ROOT)
 
 clean:
