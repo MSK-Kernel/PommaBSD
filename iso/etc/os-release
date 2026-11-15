@@ -1,0 +1,7 @@
+NAME=PommaBSD
+VERSION="14.4 i386"
+VERSION_ID="14.4"
+ID=pommabsd
+ANSI_COLOR="0;34"
+PRETTY_NAME="PommaBSD 14.4 i386"
+CPE_NAME="cpe:/o:pommabsd:pommabsd:14.4"
