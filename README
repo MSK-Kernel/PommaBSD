@@ -1,2 +1,2 @@
-Use 'make' to build "PommaBSD-*-i386.iso".
+Use 'make' to build a PommaBSD LiveCD ISO.
 Use 'make clean' to clean the build folder.
