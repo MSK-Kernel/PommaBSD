@@ -1,0 +1,2 @@
+\ Try to enable VBE framebuffer for logo
+try-include /boot/vbe.4th

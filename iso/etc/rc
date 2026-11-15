@@ -1,0 +1,23 @@
+#!/bin/sh
+
+echo ""
+echo "PommaBSD 14.4"
+echo "Welcome to PommaBSD!"
+echo ""
+
+# The ISO root is cd9660 and cannot be remounted read-write.
+# Provide writable, RAM-backed locations for normal user files.
+for dir in /tmp /var /root /home; do
+    if ! mount -t tmpfs tmpfs "$dir"; then
+        echo "PommaBSD: warning: could not mount writable tmpfs on $dir"
+    fi
+done
+
+HOME=/root
+export HOME
+cd /root
+
+# Show the current working directory in the interactive shell prompt.
+PS1='\w# '
+export PS1
+exec /bin/sh
